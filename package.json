@@ -1,0 +1,9 @@
+{
+  "name": "sirinium",
+  "version": "1.0.0",
+  "description": "Sirius University schedule parser",
+  "main": "index.js",
+  "repository": "github:perovxp/sirinium",
+  "author": "PerovXP",
+  "license": "MIT"
+}
