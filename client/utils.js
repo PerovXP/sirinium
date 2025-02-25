@@ -36,6 +36,6 @@ module.exports = {
     },
 
     getArrayOfEvents: async (data) => {
-        return Object.values(data.serverMemo.data.events).flat();
+        return data.serverMemo.data.events ? Object.values(data.serverMemo.data.events).flat() : [];
     }
 };
