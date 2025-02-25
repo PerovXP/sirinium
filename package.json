@@ -1,6 +1,6 @@
 {
   "name": "sirinium",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sirius University schedule parser",
   "main": "index.js",
   "repository": "github:perovxp/sirinium",
