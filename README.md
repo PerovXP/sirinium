@@ -6,6 +6,8 @@ const sirinium = require("sirinium");
 const client = new sirinium.Client();
 await client.getInitialData(); // Required
 
+await client.changeWeek(1); // Add 1 week
+
 const schedule = await client.getGroupSchedule("К0609-24");
 ```
 ## How it works
