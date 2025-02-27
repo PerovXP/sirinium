@@ -1,4 +1,6 @@
 ![Sirinium](https://i.imgur.com/Z2vcIbf.png)
+## Installation
+``yarn add perovxp/sirinium``
 ## Usage
 ```javascript
 const sirinium = require("sirinium");
