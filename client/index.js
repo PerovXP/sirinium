@@ -19,15 +19,13 @@ class Client {
     }
 
     async getGroupSchedule(group) {
-        const schedule = await this.parser.getGroupSchedule(group).catch((e) => {
+        return await this.parser.getGroupSchedule(group).catch((e) => {
             throw new Error("Can't get group schedule: " + e);
         });
-
-        return schedule;
     }
 
     async changeWeek(step) {
-        if (Number.isInteger(step) || step === 0) return;
+        if (!Number.isInteger(step) || step === 0) return;
 
         await this.parser.changeWeek(step).catch((e) => {
             throw new Error("Can't change week: " + e);
