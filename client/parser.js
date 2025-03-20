@@ -48,7 +48,7 @@ class Parser {
 
     async changeWeek(step) {
         const method = step > 0 ? "addWeek" : "minusWeek";
-        for (let i = 0; i <= Math.abs(step); i++) {
+        for (let i = 0; i < Math.abs(step); i++) {
             const data = await this.sendUpdates([utils.getCallMethodUpdateObject(method)]);
 
             Object.assign(this.data.serverMemo.data, data.serverMemo.data);
