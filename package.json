@@ -5,5 +5,6 @@
   "main": "index.js",
   "repository": "github:perovxp/sirinium",
   "author": "PerovXP",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "commonjs"
 }
