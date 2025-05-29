@@ -29,8 +29,6 @@ module.exports = {
     },
 
     parseInitialData: async (body) => {
-        console.log('Ответ сервера:', body);
-
         const initialDataAttribute = body.match(/wire:initial-data="(.+)"/);
         const initialDataRawString = initialDataAttribute[1].replaceAll("&quot;", "\"");
 

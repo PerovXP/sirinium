@@ -4,7 +4,7 @@ class Client {
     constructor(options = {}) {
         this.options = {
             domain: options.domain ?? "https://schedule.siriusuniversity.ru",
-            mainGridUrl: options.mainGridUrl ?? undefined,
+            mainGridUrl: options.mainGridUrl ?? undefined
         };
 
         this.parser = new parser(this.options.domain, this.options.mainGridUrl);
