@@ -8,11 +8,15 @@ class Parser {
 
     async getInitialData() {
         const response = await fetch(this.url, { credentials: "same-origin" });
-
+        console.log(response)
         this.xsrfToken = await utils.getXsrfToken(response);
         this.sessionToken = await utils.getSessionToken(response);
+        
 
         const body = await response.text();
+        console.log('Ответ сервера:', body);
+
+        console.log('Ответ сервера:', body);
 
         const initialData = await utils.parseInitialData(body);
         this.data = initialData;
@@ -27,6 +31,14 @@ class Parser {
     async getGroupSchedule(group) {
         const data = await this.sendUpdates(
             [utils.getCallMethodUpdateObject("set", [group])]
+        );
+
+        return await utils.getArrayOfEvents(data);
+    }
+
+    async getTeacherSchedule(teacher){
+        const data = await this.sendUpdates(
+            [utils.getCallMethodUpdateObject("set", [teacher])]
         );
 
         return await utils.getArrayOfEvents(data);
